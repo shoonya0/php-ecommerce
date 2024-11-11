@@ -1,0 +1,45 @@
+[33mcommit 58ee03cc291a8ba9d5831fa7202f602b314db173[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Your Name <your_email@example.com>
+Date:   Mon Nov 11 15:47:10 2024 +0530
+
+     Enhance Application Structure and User Experience
+    
+    - New Features:
+      - Introduced multiple Livewire components for improved interactivity, including LoginForm, ProductListing, and ProductSection.
+      - Added new layouts for both authenticated and guest users to streamline navigation and enhance UI.
+    
+    - Image Management:
+      - Renamed and organized image assets for better accessibility and consistency.
+    
+    - Component Development:
+      - Created reusable Blade components for buttons, input fields, and navigation links to promote code reusability and maintainability.
+    
+    - Routing Improvements:
+      - Updated routing files to accommodate new authentication and product-related features.
+    
+    - Performance Boost:
+      - Integrated Laravel Breeze for authentication, significantly enhancing application performance and user experience.
+
+[33mcommit bf66dfceed78fa01d36d5bf69c78d0680396b2af[m
+Author: Your Name <your_email@example.com>
+Date:   Mon Nov 11 01:36:49 2024 +0530
+
+    created an Hero-Section.
+
+[33mcommit 4a7b39a187616a4185db7ac5be4ba5717405c807[m
+Author: Your Name <your_email@example.com>
+Date:   Mon Nov 11 00:44:39 2024 +0530
+
+    created an Header section.
+
+[33mcommit 4d3aed50d96f1343071923267c4a95bf279ae0fc[m
+Author: Your Name <your_email@example.com>
+Date:   Mon Nov 11 00:04:28 2024 +0530
+
+    add Authentication to the project.
+
+[33mcommit fe6ce9458a30f832914be1af6eeaa32b680bd153[m
+Author: Your Name <your_email@example.com>
+Date:   Sun Nov 10 23:17:16 2024 +0530
+
+    creating a new E-commerse website.
