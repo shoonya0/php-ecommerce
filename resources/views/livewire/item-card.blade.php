@@ -1,4 +1,4 @@
-<div class="bg-gray-100 shadow-sm rounded-lg hover:border border-gray-300 p-1">
+<div class="bg-gray-100 shadow-sm rounded-lg hover:border border-gray-300 p-2">
     <a href="/product/detail">
         <div>
             <img src="{{ asset('images/5.jpg') }}" alt="product-image" class="rounded-t-lg object-cover w-full h-full" height="400px" width="400px">
