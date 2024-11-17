@@ -5,6 +5,10 @@ use App\Livewire\ManageOrders;
 use App\Livewire\ManageProduct;
 use App\Livewire\ProductDetails;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Livewire\AddCategory;
+use App\Livewire\AddProductForm;
+use App\Livewire\ManageCategories;
 
 Route::view('/', 'welcome');
 
@@ -20,14 +24,21 @@ require __DIR__ . '/auth.php';
 
 Route::get('product/detail', ProductDetails::class);
 
-Route::get('admin/dashboard', AdminDashboard::class)
-    ->middleware('admin')
-    ->name('admin.dashboard');
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin/dashboard', AdminDashboard::class)
+        ->name('admin.dashboard');
 
-Route::get('products', ManageProduct::class)
-    ->middleware('admin')
-    ->name('products');
+    Route::get('/products', ManageProduct::class)
+        ->name('products');
 
-Route::get('orders', ManageOrders::class)
-    ->middleware('admin')
-    ->name('orders');
+    Route::get('/orders', ManageOrders::class)
+        ->name('orders');
+
+    // add product form
+    Route::get('/add/product', AddProductForm::class);
+
+    Route::get('/manage/categories', ManageCategories::class);
+
+    // add category form
+    Route::get('/add/category', AddCategory::class);
+});
