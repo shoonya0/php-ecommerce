@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 // creating the products model and its relationship with the category model
-class Products extends Model
+class Product extends Model
 {
     use HasFactory;
 

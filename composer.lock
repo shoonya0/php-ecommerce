@@ -1903,16 +1903,16 @@
         },
         {
             "name": "livewire/volt",
-            "version": "v1.6.5",
+            "version": "v1.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "d09fdb4cb52c6ce821d255683195bb6d446fe141"
+                "reference": "9efa7bd50a71ad166ac44ed9322d2c004e0ece5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/d09fdb4cb52c6ce821d255683195bb6d446fe141",
-                "reference": "d09fdb4cb52c6ce821d255683195bb6d446fe141",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/9efa7bd50a71ad166ac44ed9322d2c004e0ece5f",
+                "reference": "9efa7bd50a71ad166ac44ed9322d2c004e0ece5f",
                 "shasum": ""
             },
             "require": {
@@ -1971,7 +1971,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2024-05-31T19:07:20+00:00"
+            "time": "2024-11-12T14:51:01+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5948,16 +5948,16 @@
         },
         {
             "name": "laravel/breeze",
-            "version": "v2.2.4",
+            "version": "v2.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/breeze.git",
-                "reference": "d3484d08aaaa84896bdd2d1787e7da0fc03f676f"
+                "reference": "e698f651ac55920fd2ee1336c3c6cdd2467ea784"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/breeze/zipball/d3484d08aaaa84896bdd2d1787e7da0fc03f676f",
-                "reference": "d3484d08aaaa84896bdd2d1787e7da0fc03f676f",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/e698f651ac55920fd2ee1336c3c6cdd2467ea784",
+                "reference": "e698f651ac55920fd2ee1336c3c6cdd2467ea784",
                 "shasum": ""
             },
             "require": {
@@ -6004,7 +6004,7 @@
                 "issues": "https://github.com/laravel/breeze/issues",
                 "source": "https://github.com/laravel/breeze"
             },
-            "time": "2024-10-29T15:11:57+00:00"
+            "time": "2024-11-12T14:56:47+00:00"
         },
         {
             "name": "laravel/pail",

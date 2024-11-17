@@ -18,7 +18,7 @@
         
             <div class="my-3">
                 <a class="flex gap-2 justify-center w-full rounded border-blue-600 bg-red-600 px-12 py-2 text-sm font-medium text-white text-center transition-colors duration-500 ease-in-out hover:bg-blue-600 hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-                    href="#" 
+                    href="{{auth()->check() ? '/add/to/cart' : '/register'}}" 
                     class=""
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

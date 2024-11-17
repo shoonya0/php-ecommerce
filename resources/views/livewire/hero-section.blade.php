@@ -15,12 +15,21 @@
       </p>
 
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          class="block w-full rounded border border-blue-600 bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-          href="#"
-        >
-          Get Started
-        </a>
+        @if (auth()->check())
+          <a
+            class="block w-full rounded border border-blue-600 bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+            href="/offer"
+          >
+            Reedeem Your Reward Now!
+          </a>
+        @else
+          <a
+            class="block w-full rounded border border-blue-600 bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+            href="/register"
+          >
+            Get Started
+          </a>
+        @endif
 
         <a
           class="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"

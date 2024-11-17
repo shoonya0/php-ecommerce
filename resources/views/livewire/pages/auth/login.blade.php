@@ -17,7 +17,25 @@ $login = function () {
 
     Session::regenerate();
 
-    $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+    // $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+    
+
+    // if (session()->get('url.intended') != route('dashboard')) {
+        if (auth()->check() && auth()->user()->role === 1) {
+            $this->redirectIntended(route('admin.dashboard', absolute: false), navigate: true); // Redirect to admin dashboard
+        } else if (auth()->check() && auth()->user()->role === 0) {
+            $this->redirectIntended(route('dashboard', absolute: false), navigate: true); // Redirect to user dashboard
+        } else {
+            $this->redirectIntended(route('/', absolute: false), navigate: true); // Redirect to dashboard
+        }
+    // } else {
+    //     if (auth()->check() && auth()->user()->role === '1') {
+    //         $this->redirectIntended(route('admin.dashboard', absolute: false), navigate: true); // Redirect to admin dashboard
+    //     } else {
+    //         $this->redirectIntended(route('dashboard', absolute: false), navigate: true); // Redirect to user dashboard
+    //     }
+    // }
+
 };
 
 ?>
