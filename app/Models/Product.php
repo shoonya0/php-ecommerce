@@ -22,7 +22,7 @@ class Product extends Model
     public function scopeSearch($query, $search)
     {
         $query->where('name', 'like', "%{$search}%")
-            ->orWhere('category_id', 'like', "%{$search}%")
+            ->orWhere('description', 'like', "%{$search}%")
             ->orWhereHas('category', function ($query) use ($search) {
                 $query->where('name', 'like', "%{$search}%");
             });

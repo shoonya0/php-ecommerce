@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Livewire\AddCategory;
 use App\Livewire\AddProductForm;
+use App\Livewire\EditProduct;
 use App\Livewire\ManageCategories;
 
 Route::view('/', 'welcome');
@@ -41,4 +42,7 @@ Route::group(['middleware' => 'admin'], function () {
 
     // add category form
     Route::get('/add/category', AddCategory::class);
+
+    // edit product
+    Route::get('/edit/{id}/product', EditProduct::class);
 });

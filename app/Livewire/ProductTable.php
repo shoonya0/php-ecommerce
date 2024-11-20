@@ -29,6 +29,30 @@ class ProductTable extends Component
         $this->sortDirection = 'ASC';
     }
 
+    public function delete($id)
+    {
+
+        $product = Product::find($id);
+
+        if ($product->image) {
+            $imagePath1 = storage_path('app/private/' . $product->image);
+            $imagePath2 = storage_path('app/private/livewire-temp/' . basename($product->image));
+
+            if (file_exists($imagePath1)) {
+                unlink($imagePath1);
+            }
+            if (file_exists($imagePath2)) {
+                unlink($imagePath2);
+                // dd($imagePath2 . " deleted"); // Debugging line
+            }
+            // dd($imagePath1 . " not deleted"); // Debugging line
+        }
+
+        $product->delete();
+
+        return $this->redirect(route('products'), navigate: true);
+    }
+
     public function render()
     {
         // return view('livewire.product-table');

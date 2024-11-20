@@ -5,7 +5,7 @@ namespace App\Livewire;
 use App\Models\Category;
 use App\Models\Product;
 use Livewire\Component;
-use Livewire\Features\SupportFileUploads\WithFileUploads;
+use Livewire\WithFileUploads;
 
 class AddProductForm extends Component
 {
@@ -59,7 +59,7 @@ class AddProductForm extends Component
 
         $product->save();
 
-        return redirect()->route('products');
+        return $this->redirect(route('products'), navigate: true);
     }
 
     public function render()
