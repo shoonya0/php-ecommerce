@@ -71,10 +71,10 @@ class EditProduct extends Component
 
     public function render()
     {
-        // $current_url = url()->current();
-        // $explode_url = explode('/', $current_url);
+        $current_url = url()->current();
+        $explode_url = explode('/', $current_url);
 
-        // $this->currentUrl = $explode_url[3] . ' ' . $explode_url[5];
+        $this->currentUrl = $explode_url[3] . ' ' . $explode_url[5];
 
         return view('livewire.edit-product')
             ->layout('admin-layout');

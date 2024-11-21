@@ -1,19 +1,16 @@
 <div>
     <div class="flex gap-5 p-20">
-        <img src="{{ asset('images/5.jpg') }}" alt="product-image" class="rounded-t-lg object-cover w-[900px] h-[280px]">
+        <img src="{{$product->image ? url('http://localhost/E-commerce/storage/app/private/photos/' . basename($product->image)) : asset('images/placeholder-image.jpg')}}" alt="product-image" class="rounded-t-lg object-cover w-[400px] h-[400px]" height="400px" width="400px">
         <div>
-            <h2 class="p-1 font-medium text-2xl line-clamp-2">Product Title</h2>
+            <h2 class="p-1 font-medium text-2xl line-clamp-2">{{$product->name}}</h2>
             <h2 class="p-1 text-gray-500 line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                {{$product->description}}
             </h2>
             <div class="flex gap-10">
                 <div class="p-1 bg-green-200 rounded-md">
-                    <h2 class="text-1xl">Outfit</h2>
+                    <h2 class="text-1xl">{{$product->category->name}}</h2>
                 </div>
-                <h2 class="p-1 font-medium">$4.23</h2>
+                <h2 class="p-1 font-medium">${{$product->price}}</h2>
             </div>
         
             <div class="my-3">
@@ -34,6 +31,6 @@
     {{-- related products --}}
     <div class="my-5 px-20 pt-5">
         <h2 class="text-2xl font-medium">Related Products</h2>
-        <livewire:product-listing />
+        <livewire:product-listing :category_id="$product->category_id" :current_product_id="$product->id" />
     </div>
 </div>

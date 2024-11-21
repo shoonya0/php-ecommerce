@@ -10,6 +10,8 @@ class ManageCategories extends Component
 {
     use WithPagination;
 
+    public $currentUrl;
+
     public $perPage = 5;
 
     public $search = '';
@@ -29,9 +31,20 @@ class ManageCategories extends Component
         $this->sortDirection = 'ASC';
     }
 
+    public function delete($id)
+    {
+        Category::find($id)->delete();
+
+        return $this->redirect(route('categories'), navigate: true);
+    }
 
     public function render()
     {
+        $current_url = url()->current();
+        $explode_url = explode('/', $current_url);
+
+        $this->currentUrl = $explode_url[3] . ' ' . $explode_url[4];
+
         return view('livewire.manage-categories', [
             'categories' => Category::search($this->search)
                 ->orderBy($this->sortByColumn, $this->sortDirection)

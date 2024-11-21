@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Livewire\AddCategory;
 use App\Livewire\AddProductForm;
+use App\Livewire\EditCategory;
 use App\Livewire\EditProduct;
 use App\Livewire\ManageCategories;
 
@@ -23,7 +24,7 @@ Route::view('profile', 'profile')
 
 require __DIR__ . '/auth.php';
 
-Route::get('product/detail', ProductDetails::class);
+Route::get('product/{product_id}/detail', ProductDetails::class);
 
 Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin/dashboard', AdminDashboard::class)
@@ -45,4 +46,7 @@ Route::group(['middleware' => 'admin'], function () {
 
     // edit product
     Route::get('/edit/{id}/product', EditProduct::class);
+
+    // edit category
+    Route::get('/edit/{id}/category', EditCategory::class);
 });

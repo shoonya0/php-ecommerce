@@ -1,7 +1,7 @@
 <div>
-    {{-- <div class="mb-10">
+    <div class="mb-10">
         <livewire:bread-crumb :url="$currentUrl" />
-    </div> --}}
+    </div>
     <div class="bg-gray-800 text-white rounded-3xl mb-5 max-w-6xl mx-auto">
         <!-- Card Section -->
         <div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">

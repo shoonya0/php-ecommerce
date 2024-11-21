@@ -120,7 +120,10 @@
   <!-- End Table Section --> --}}
 
 
-
+<div>
+  <div class="mb-10">
+    <livewire:bread-crumb :url="$currentUrl" />
+  </div>
   <div class="font-sans antialiased dark:bg-black dark:text-white/50 rounded-2xl">
     <div class="flex flex-col">
         <!-- Header -->
@@ -209,12 +212,12 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">{{ $item->name }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">{{ $item->created_at->format('D M Y,H:i') }}</td>
                                     <td class="whitespace-nowrap px-6 py-1.5">
-                                      <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="#">
+                                      <a wire:navigate class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="/edit/{{ $item->id }}/category">
                                         Edit
                                       </a>
                                     </td>
                                     <td class="whitespace-nowrap px-6 py-1.5">
-                                      <a class="inline-flex items-center gap-x-1 text-sm text-red-500 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="#">
+                                      <a wire:click="delete({{ $item->id}})" wire:confirm.prompt="Are you sure?\n\nType DELETE to confirm|DELETE" class="inline-flex items-center gap-x-1 text-sm text-red-500 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="">
                                           Delete
                                       </a>
                                     </td>
@@ -250,4 +253,5 @@
             </div>
         </div>
     </div>
+  </div>
 </div>
